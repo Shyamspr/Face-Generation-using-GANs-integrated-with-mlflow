@@ -1,0 +1,16 @@
+name: GAN
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      learning_rate: {type: float, default: 0.0001}
+      epochs: {type: int, default: 5}
+      noise_dim: {type: int, default: 100}
+      num_examples_to_generate: {type: int, default: 16}
+      buffer_size: {type: int, default: 202599}
+      batch_size: {type: int, default: 256}
+    command: "python GAN.py {learning_rate} {epochs} {noise_dim} {num_examples_to_generate} {buffer_size} {batch_size}"
+    
+    
